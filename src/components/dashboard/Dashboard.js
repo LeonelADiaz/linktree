@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
-import portrait from './../../assests/Portrait.jpg'
-
+import { Layout, Row, Col, Button} from 'antd';
+import portrait from './../../assests/Portrait.jpg';
+import { Link } from 'react-router-dom';
+import './../../App.css';
 const { Header, Footer, Sider, Content } = Layout;
 
 class Dashboard extends Component {
@@ -9,29 +10,39 @@ class Dashboard extends Component {
     render() {
         return (
             <Layout style={{
-                minHeight: "100%",
-                position: "relative",
+
             }}>
                 <Header style={{
                     top: "0%",
                     position: "fixed",
                     width: "100%",
+                    backgroundColor: "white",
                 }}>
-                    Header
+                    
                 </Header>
                 <Content style={{
-                    paddingBottom: "100px",
+                    minHeight: "868px",
+                    paddingTop: "400px",
                 }}>
-                    <img src={portrait} alt="Portrait" height="100px" width="100px" ></img>
-
+                    {/*<Row>
+                        <Col span={12}>col</Col>
+                        <Col span={12}>col</Col>
+                    </Row>*/}
+                    <h1 style={{
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                    }}>One link. All the links.</h1>
+                    <Button type="primary">Sign Up!</Button>
+                    <h4>
+                        Already have an account?
+                        <Link to="/login"> Sign In</Link>
+                    </h4>
                 </Content>
                 <Footer style={{
-                    bottom: "-363%",
-                    width: "100%",
-                    position: "absolute",
+         
               
                 }}>
-                    Footer
+                    Copyright 2021 LeonelADiaz
                 </Footer>
             </Layout>
         )
