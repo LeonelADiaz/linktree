@@ -6,7 +6,7 @@ import { Link, Redirect, useHistory } from 'react-router-dom';
 import { render } from '@testing-library/react';
 const { Header, Footer, Sider, Content } = Layout;
 
-const Login = (props) => {
+export default function Login() {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     let history = useHistory();
@@ -86,6 +86,5 @@ const Login = (props) => {
 
 }
 
-export default Login;
 
 

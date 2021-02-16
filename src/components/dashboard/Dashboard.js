@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col, Button} from 'antd';
+import { HomeOutlined } from '@ant-design/icons';
 import portrait from './../../assests/Portrait.jpg';
 import { Link } from 'react-router-dom';
 import './../../App.css';
+import firebase from "firebase";
+
 const { Header, Footer, Sider, Content } = Layout;
 
-class Dashboard extends Component {
 
-    render() {
+export default function Dashboard() {
+        const firebaseApp = firebase.apps[0];
         return (
             <Layout style={{
 
@@ -46,8 +49,6 @@ class Dashboard extends Component {
                 </Footer>
             </Layout>
         )
-    }
+    
 
 }
-
-export default Dashboard;
